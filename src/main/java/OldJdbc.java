@@ -3,9 +3,9 @@ import java.sql.*;
 /**
  * Created by b.istomin on 08.06.2015.
  */
-public class Main {
+public class OldJdbc {
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void addStudentJdbc() {
 
         Student student = new Student();
         student.setName("Adam");
