@@ -5,10 +5,10 @@ import java.sql.*;
  */
 public class OldJdbc {
 
-    public static void addStudentJdbc() {
+    public static void addStudent() {
 
         Student student = new Student();
-        student.setName("Adam");
+        student.setName("old jdbc");
 
         try {
             Class.forName("org.hsqldb.jdbcDriver");

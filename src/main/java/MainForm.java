@@ -8,20 +8,26 @@ import java.awt.event.ActionListener;
  */
 public class MainForm extends JFrame {
     private JButton goButton;
-    private JRadioButton radioButton1;
+    private JRadioButton oldJdbc;
     private JPanel rootPanel;
     private JProgressBar progressBar1;
+    private JRadioButton springJdbcTemplate;
 
     public MainForm() throws HeadlessException {
         super("some jdbc testing");
         pack();
         setContentPane(rootPanel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(500, 500);
 
         goButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                OldJdbc.addStudentJdbc();
+                if (oldJdbc.isSelected()) {
+                    OldJdbc.addStudent();
+                } else if (springJdbcTemplate.isSelected()) {
+                    SpringJdbc.addStudent();
+                }
             }
         });
 
