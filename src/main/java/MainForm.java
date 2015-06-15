@@ -12,6 +12,8 @@ public class MainForm extends JFrame {
     private JPanel rootPanel;
     private JProgressBar progressBar1;
     private JRadioButton springJdbcTemplate;
+    private JList resultList;
+    private JButton getButton;
 
     public MainForm() throws HeadlessException {
         super("some jdbc testing");
@@ -28,6 +30,13 @@ public class MainForm extends JFrame {
                 } else if (springJdbcTemplate.isSelected()) {
                     SpringJdbc.addStudent();
                 }
+            }
+        });
+
+        getButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resultList.setListData(SpringJdbc.getStudents().toArray());
             }
         });
 

@@ -14,6 +14,13 @@ public class Student {
         this.percentage = percentage;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
